@@ -1,0 +1,35 @@
+[02-Jun-2020 15:08:59 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[02-Jun-2020 15:08:59 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[05-Jun-2020 19:19:18 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[05-Jun-2020 19:19:19 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[05-Jun-2020 21:45:02 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[05-Jun-2020 21:45:02 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[12-Jun-2020 16:09:10 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[12-Jun-2020 16:09:10 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[12-Jun-2020 17:08:59 UTC] PHP Warning:  unlink(../service_image/Canva - Person Using Black Laptop Computer.jpg): No such file or directory in /home/d1r89x16z1qi/public_html/admin/edit_services.php on line 20
+[12-Jun-2020 18:27:31 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[12-Jun-2020 18:27:31 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[16-Jun-2020 05:06:13 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[16-Jun-2020 05:06:13 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[23-Jun-2020 13:11:40 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[23-Jun-2020 13:11:40 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[29-Jun-2020 22:49:39 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[29-Jun-2020 22:49:39 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[29-Jun-2020 22:51:12 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[29-Jun-2020 22:51:12 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[01-Jul-2020 16:02:53 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[01-Jul-2020 16:02:53 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[01-Jul-2020 16:08:59 UTC] PHP Warning:  unlink(../banner_image/slide2.jpg): No such file or directory in /home/d1r89x16z1qi/public_html/admin/edit_banner.php on line 20
+[01-Jul-2020 16:09:42 UTC] PHP Warning:  unlink(../banner_image/slide3.jpg): No such file or directory in /home/d1r89x16z1qi/public_html/admin/edit_banner.php on line 20
+[01-Jul-2020 16:10:26 UTC] PHP Warning:  unlink(../banner_image/slide7.jpg): No such file or directory in /home/d1r89x16z1qi/public_html/admin/edit_banner.php on line 20
+[02-Jul-2020 17:10:10 UTC] PHP Warning:  unlink(../banner_image/Canva - Person Using Black Laptop Computer.jpg): No such file or directory in /home/d1r89x16z1qi/public_html/admin/edit_banner.php on line 20
+[03-Jul-2020 03:14:48 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[03-Jul-2020 03:14:48 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[03-Jul-2020 03:27:43 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[03-Jul-2020 03:27:43 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[06-Jul-2020 19:26:18 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[06-Jul-2020 19:26:18 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[29-Jul-2020 17:30:56 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[29-Jul-2020 17:30:56 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
+[07-Aug-2020 18:49:01 UTC] PHP Notice:  Undefined variable: month in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 83
+[07-Aug-2020 18:49:01 UTC] PHP Notice:  Undefined variable: total_count in /home/d1r89x16z1qi/public_html/admin/dashboard.php on line 87
