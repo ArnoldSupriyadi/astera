@@ -175,11 +175,6 @@ include "connection.php";
                         while($total=mysqli_fetch_assoc($sql))
 
                         {
-                        // $uri = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-                        // $link_address = substr($uri, 0, 0);
-                        // $link_baru = $link_address;
-                        // print_r($link_baru);  
-
                        
                     ?>
                     <div class="service-block">
@@ -205,50 +200,6 @@ include "connection.php";
     </section>
     <!--End Services Section -->
 
-    <!-- Fun Fact Section -->
-    <!-- <section class="fun-fact-section">
-        <div class="outer-box" style="background-image: url(images/background/3.jpg);">
-            <div class="auto-container">
-                <div class="fact-counter">
-                    <div class="row">
-                       
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="7">0</span></div>
-                                <h4 class="counter-title">Years of <br>Experience</h4>
-                            </div>
-                        </div>
-
-                        
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="89">0</span></div>
-                                <h4 class="counter-title">Project <br>Taken</h4>
-                            </div>
-                        </div>
-
-                        
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="360">0</span>K</div>
-                                <h4 class="counter-title">Export <br> container <br>/ year</h4>
-                            </div>
-                        </div>
-
-                        
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="3">0</span></div>
-                                <h4 class="counter-title">Smart Brand<br>established</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--End Fun Fact Section -->
-
     <!-- Project Section -->
     <section class="projects-section">
         <div class="auto-container">
@@ -261,94 +212,28 @@ include "connection.php";
         <div class="inner-container">
             <div class="projects-carousel owl-carousel owl-theme">
                 <!-- Project Block -->
-                <div class="project-block">
-                    <div class="image-box">
-                        <figure class="image"><img src="images/gallery/OUR_PROJECT_ASTERA_1.jpg" alt=""></figure>
-                        <div class="overlay-box">
-                            <h4><a href="javascript:void(0);">Laxury Home <br>Project</a></h4>
-                            <div class="btn-box">
-                                <a href="images/gallery/OUR_PROJECT_ASTERA_1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                                <a href="javascript:void(0);"><i class="fa fa-external-link"></i></a>
-                            </div>
-                            <span class="tag">Architecture</span>
-                        </div>
-                    </div>
-                </div>
+                   <?php
+                        $sql= mysqli_query($con,"select * from our_project");
+                        while($project=mysqli_fetch_assoc($sql))
 
-                <!-- Project Block -->
+                        {
+                       
+                    ?>
                 <div class="project-block">
                     <div class="image-box">
-                        <figure class="image"><img src="images/gallery/OUR_PROJECT_ASTERA_2.jpg" alt=""></figure>
+                        <figure class="image"><img src="our_project/<?php echo $project['image']?>" alt=""></figure>
                         <div class="overlay-box">
-                            <h4><a href="javascript:void(0);">Laxury Home <br>Project</a></h4>
+                            <h4><a href="javascript:void(0);"><?= $project['name'] ?><br>Project</a></h4>
                             <div class="btn-box">
-                                <a href="images/gallery/OUR_PROJECT_ASTERA_2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                                <a href="javascript:void(0);"><i class="fa fa-external-link"></i></a>
+                                <a href="images/gallery/<?php echo $project['image']?>"class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
+                                <a href="<?= $project['link'] ?>" target="_blank"><i class="fa fa-external-link"></i></a>
                             </div>
-                            <span class="tag">Architecture</span>
+                            <span class="tag"><?= $project['name'] ?></span>
                         </div>
                     </div>
                 </div>
+                <?php } ?>
 
-                <!-- Project Block -->
-                <div class="project-block">
-                    <div class="image-box">
-                        <figure class="image"><img src="images/gallery/OUR_PROJECT_ASTERA_3.jpg" alt=""></figure>
-                        <div class="overlay-box">
-                            <h4><a href="javascript:void(0);">Laxury Home <br>Project</a></h4>
-                            <div class="btn-box">
-                                <a href="images/gallery/OUR_PROJECT_ASTERA_3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                                <a href="javascript:void(0);"><i class="fa fa-external-link"></i></a>
-                            </div>
-                            <span class="tag">Architecture</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Block -->
-                <div class="project-block">
-                    <div class="image-box">
-                        <figure class="image"><img src="images/gallery/OUR_PROJECT_ASTERA_4.jpg" alt=""></figure>
-                        <div class="overlay-box">
-                            <h4><a href="javascript:void(0);">Laxury Home <br>Project</a></h4>
-                            <div class="btn-box">
-                                <a href="images/gallery/OUR_PROJECT_ASTERA_4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                                <a href="javascript:void(0);"><i class="fa fa-external-link"></i></a>
-                            </div>
-                            <span class="tag">Architecture</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Block -->
-                <div class="project-block">
-                    <div class="image-box">
-                        <figure class="image"><img src="images/gallery/OUR_PROJECT_ASTERA_5.jpg" alt=""></figure>
-                        <div class="overlay-box">
-                            <h4><a href="javascript:void(0);">Laxury Home <br>Project</a></h4>
-                            <div class="btn-box">
-                                <a href="images/gallery/OUR_PROJECT_ASTERA_5.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                                <a href="javascript:void(0);"><i class="fa fa-external-link"></i></a>
-                            </div>
-                            <span class="tag">Architecture</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Block -->
-                <div class="project-block">
-                    <div class="image-box">
-                        <figure class="image"><img src="images/gallery/OUR_PROJECT_ASTERA_3.jpg" alt=""></figure>
-                        <div class="overlay-box">
-                            <h4><a href="javascript:void(0);">Laxury Home <br>Project</a></h4>
-                            <div class="btn-box">
-                                <a href="images/gallery/OUR_PROJECT_ASTERA_3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                                <a href="javascript:void(0);"><i class="fa fa-external-link"></i></a>
-                            </div>
-                            <span class="tag">Architecture</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

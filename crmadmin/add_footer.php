@@ -28,7 +28,7 @@
                 <i class="fa fa-users"></i>
             </div>
             <div class="header-title">
-                <h1>Show Our Project</h1>
+                <h1>Show Footer</h1>
             </div>
         </section>
         <!-- Main content -->
@@ -39,7 +39,7 @@
                         <div class="panel-heading">
                             <div class="btn-group" id="buttonexport">
                                 <a href="#">
-                                    <h4>Show Our Project</h4>
+                                    <h4>Show Footer</h4>
                                 </a>
                             </div>
                         </div>
@@ -55,41 +55,31 @@
 
                                         <th style="width:30%;text-align: center"> Image</th>
 
-                                        <th style="width:30%;text-align: center"> Name</th>
+                                        <th style="width:30%;text-align: center"> Title</th>
                                         
-                                        <th style="width:20%;text-align: center"> Link</th>
-                                        <!-- <th style="width:15%;text-align: center"> Meta Title</th>
-
-                                        <th style="width:15%;text-align: center"> Meta Description</th> -->
-
-
-                                        <th style="width:10%;text-align: center">Edit</th>
+                                         <th style="width:30%;text-align: center"> Content</th>
 
 
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-                                      $sql= mysqli_query($con,"select * from our_project");
-                                      while($total=mysqli_fetch_assoc($sql))
+                                      $sql= mysqli_query($con,"select * from footer");
+                                      while($footer=mysqli_fetch_assoc($sql))
 
                                       {
                                      ?>
                                      
                                         <tr>
 
-                                            <td style="text-align: center"><img src="../our_project/<?php echo $total['image'];?>"  style="width: 200px;height: 200px;"> </td>
+                                            <td style="text-align: center"><img src="../footer/<?= $footer['image'];?>"  style="width: 200px;height: 200px;"> </td>
 
-
-                                            <td style="text-align: center"><?php echo $total['name'];?></td>
-                                            <?php $desc = $total['name']; ?>
-
-                                            <td style="text-align: center"><a href="<?php echo ($total['link']) ;?>" target="_blank"><?php echo ($total['link']);?></td>
+                                            <td style="text-align: center"><?= $footer['content'];?></td>
 
                                             <td>
-                                                <a href="edit_our_project.php?crtid=<?php echo $total['id'];?>"><button type="button" class="btn btn-add btn-sm" style="width: 50px;height: 25px; color: whitesmoke;background-color: #00bdfd; border-color:#00bdfd "><i class="fa fa-pencil"></i>Edit</button></a>
+                                                <a href="edit_footer.php?crtid=<?= $footer['id'];?>"><button type="button" class="btn btn-add btn-sm" style="width: 50px;height: 25px; color: whitesmoke;background-color: #00bdfd; border-color:#00bdfd "><i class="fa fa-pencil"></i>Edit</button></a>
                                                 <div>&nbsp;</div>
-                                                <!-- <a href="delete_blog.php?crtid=<?php echo $total['id'];?>&img_id=<?php echo $total['image'];?>"><button type="button" class="btn btn-delete btn-sm" style="width: 50px;height: 25px; color: whitesmoke;background-color: red; border-color:red"><i class="fa fa-trash-o"></i>Delete</button></a> -->
+                                                
                                             </td>
 
                                         </tr>

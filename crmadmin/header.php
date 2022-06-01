@@ -176,17 +176,20 @@
 
                 </li>
 
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-building-o"></i><span>About Us</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="edit_cover_about.php">Edit Cover About</a></li>
+                                <li><a href="update_aboutus.php">Update Blog</a></li>
+                            </ul>
+                        </li>
 
-
-
-                <li class="treeview">
-                    <a href="update_aboutus.php">
-                        <i class="fa fa-building-o"></i><span>About Us</span>
-                    </a>
-                </li> 
-
-
-                 <li class="treeview">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-rss"></i><span>Blog</span>
                                 <span class="pull-right-container">
@@ -194,6 +197,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
+                                <li><a href="edit_cover_blog.php">Edit Cover Blog</a></li>
                                 <li><a href="add_blog.php">Add Blog</a></li>
                                 <li><a href="show_blog.php">Show Blog</a></li>
                             </ul>
@@ -208,6 +212,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
+                                <li><a href="edit_cover_product.php">Edit Cover Product</a></li>
                                 <li><a href="firstslider.php">First Slider Product</a></li>
                                 <li><a href="show_firstproduct.php"> Show First Slider</a></li>
                                 <li><a href="secondslider.php">Second Slider Product</a></li>
@@ -217,30 +222,6 @@
                             </ul>
                         </li>
 
-               
-
-
-                <!-- <li class="treeview">
-                    <a href="what-we-do.php">
-                        <i class="fa fa-users"></i><span>What We Do</span>
-                        <span class="pull-right-container">
-                     </span>
-                    </a>
-                </li> -->
-
-                       <!-- <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-users"></i><span>Testimonial</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add_testimonial.php">Add Testimonial</a></li>
-                                <li><a href="show_testimonial.php">Show Testimonial</a></li>
-                            </ul>
-                        </li> -->
-                       
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-address-card"></i><span>Contact</span>
@@ -249,143 +230,17 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
+                                 <li><a href="edit_cover_contact.php">Edit Cover Contact</a></li>
                                 <li><a href="contactus.php">Contact Us</a></li>
                                 <li><a href="show_contact_form.php">Show Contact Form</a></li>
                             </ul>
                         </li> 
 
-                        <!--  <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-users"></i><span>Appointment</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                               <li><a href="contactus.php">Contact Us</a></li> 
-                                <li><a href="showappointment.php">Show Appointment Form</a></li>
-                            </ul>
-                        </li> -->
-
-
-
-               <!--  <li class="treeview">
-                    <a href="contactus.php">
-                        <i class="fa fa-users"></i><span>Contact Us</span>
-                        <span class="pull-right-container">
-                     </span>
-                    </a>
-                </li> -->
-                <!-- <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-users"></i><span>Testimonial</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add_testimonial.php">Add Testimonial</a></li>
-                                <li><a href="show_testimonial.php">Show Testimonial</a></li>
-                            </ul>
-                        </li> -->
-
-
-         
-         
-
-
-               <!--  <li class="treeview">
-                    <a href="social_links.php">
-                        <i class="fa fa-users"></i><span>Social Media</span>
-                        <span class="pull-right-container">
-                     </span>
-                    </a>
-                </li> -->
-
-
-                <!-- <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-users"></i><span>What We Do</span>
-                        <span class="pull-right-container">
-                     <i class="fa fa-angle-left pull-right"></i>
-                     </span>
-                    </a>
-
-                    <ul class="treeview-menu">
                         <li class="treeview">
-                          <a href="what-we-do-content.php">
-                           <i class="fa fa-users"></i><span>What We Do Content</span>
-                           <span class="pull-right-container">
-                           </span>
-                         </a>
-                         </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-users"></i><span>Music Video</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
+                            <a href="add_footer.php">
+                                <i class="fa fa-rocket"></i><span>Footer</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add-music-videos.php">Add Music Video</a></li>
-                                <li><a href="show_music_video.php">Show Music Video</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-users"></i><span>Business Promos</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add_business_promos.php">Add Business Promos</a></li>
-                                <li><a href="show_business_promos.php">Show Business Promos</a></li>
-                            </ul>
-                        </li>
-
-                        
-                    </ul>
-                </li>
-
-                <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-users"></i><span>Gallery</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add_gallery.php">Add Gallery</a></li>
-                                <li><a href="show_gallery.php">Show Gallery</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li class="treeview">
-                    <a href="logo.php">
-                        <i class="fa fa-users"></i><span>Logo</span>
-                        <span class="pull-right-container">
-                     </span>
-                    </a>
-                </li> -->
-
-
-                <!-- <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-users"></i><span>Blog</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="add_blog.php">Add Blog</a></li>
-                                <li><a href="show_blog.php">Show Blog</a></li>
-                            </ul>
-                        </li> -->
-
-
+                        </li> 
 
             </ul>
         </div>

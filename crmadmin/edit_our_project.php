@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
 
     $pid=$_POST['pid'];
     $name=$_POST['name'];
-    $category=$_POST['category'];
+    $link=$_POST['link'];
     
     // $content=$_POST['editor'];
     // $title = $_POST['title'];
@@ -77,7 +77,7 @@ if(isset($_POST['submit'])){
     // $b_id=$_POST['b_id'];
 
 
-    $sql = mysqli_query($con, "UPDATE  our_project SET name='$name' ,category='$category', image='$file_name'   WHERE id=$pid ");
+    $sql = mysqli_query($con, "UPDATE  our_project SET name='$name' ,link='$link', image='$file_name'   WHERE id=$pid ");
 
     if($sql){
         $msg="Blog Updated Successfully...";
@@ -183,18 +183,18 @@ if(isset($_POST['submit'])){
     <div class="row">
         <div class="col-md-12" style="padding-left: 25px">
             <div class="form-group col-sm-6">
-                <label> Enter Category Name </label>
-                <input type="text" class="form-control" value="<?php echo $total['category'];?>" placeholder=""  name="category" style="width: 920px;" >
+                <label> Enter Link Name </label>
+                <input type="text" class="form-control" value="<?php echo $total['link'];?>" placeholder=""  name="link" style="width: 920px;" >
             </div>
         </div>
     </div>
 
 </div>
-<input type="text" name="pid" value="<?php echo $crid; ?>">
+<input type="hidden" name="pid" value="<?php echo $crid; ?>">
 
-     <input type="text" name="image1" value="<?php echo $total['image'];?>">
+     <input type="hidden" name="image1" value="<?php echo $total['image'];?>">
 
-    <input type="text" name="img_id" value="<?php echo $total['image'];?>">
+    <input type="hidden" name="img_id" value="<?php echo $total['image'];?>">
 
 
 <div class="col-md-12">
