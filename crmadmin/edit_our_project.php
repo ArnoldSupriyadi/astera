@@ -154,8 +154,6 @@ if(isset($_POST['submit'])){
                             $sql= mysqli_query($con,"select * from our_project where id='$crid'  ");
 
                             $total=mysqli_fetch_assoc($sql);
-                            
-
                         ?>
                         <form class="col-md-12" action="" method="post" enctype="multipart/form-data">
 
