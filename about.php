@@ -361,36 +361,44 @@ body {
                 <div class="fact-counter">
                     <div class="row">
                         <!--Column-->
+                        <?php
+                            $sql= mysqli_query($con,"select * from experience");
+                            while($row=mysqli_fetch_assoc($sql))
+                            {
+                        ?>
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="7">0</span></div>
-                                <h4 class="counter-title">Years of <br>Experience</h4>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $row['number_title_one'] ?>">0</span></div>
+                                <h4 class="counter-title"><?= $row['title_one'] ?></h4>
                             </div>
                         </div>
 
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="89">0</span></div>
-                                <h4 class="counter-title">Project <br>Taken</h4>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $row['number_title_two'] ?>">0</span></div>
+                                <h4 class="counter-title"><?= $row['title_two'] ?></h4>
                             </div>
                         </div>
 
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="360">0</span>K</div>
-                                <h4 class="counter-title">Exports <br> container / year</h4>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $row['number_title_three'] ?>">0</span>K</div>
+                                <h4 class="counter-title"><?= $row['title_three'] ?></h4>
                             </div>
                         </div>
 
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="3">0</span></div>
-                                <h4 class="counter-title">Smart Brand<br>established</h4>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $row['number_title_four'] ?>">0</span></div>
+                                <h4 class="counter-title"><?= $row['title_four'] ?></h4>
                             </div>
                         </div>
+                        <?php 
+                            }
+                        ?>
                     </div>
                 </div>
 
@@ -436,7 +444,15 @@ body {
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <img src="images/background/Milestone_astera.jpg" alt="milestone astera" class="img-fluid">
+            <?php
+                  $sql= mysqli_query($con,"select * from  milestone ");
+                  while($milestone=mysqli_fetch_assoc($sql))
+                  {
+               ?>
+            <img src="milestone/<?= $milestone['image'];?>" alt="milestone astera" class="img-fluid">
+            <?php
+                  }
+            ?>
           </div>
         </div>
       </div>

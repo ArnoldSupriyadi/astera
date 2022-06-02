@@ -47,7 +47,6 @@ if(isset($_POST['submit'])){
     $file_ext=strtolower(end($array));
 
 
-
     $expensions= array("jpeg","jpg","png");
 
     if(in_array($file_ext,$expensions)=== false){
@@ -60,8 +59,6 @@ if(isset($_POST['submit'])){
     if(empty($errors)==true) {
 
         move_uploaded_file($file_tmp, "../our_project/" . $file_name);
-
-
 
     }
 

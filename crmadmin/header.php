@@ -186,6 +186,8 @@
                             <ul class="treeview-menu">
                                 <li><a href="edit_cover_about.php">Edit Cover About</a></li>
                                 <li><a href="update_aboutus.php">Update Blog</a></li>
+                                <li><a href="add_milestone.php">Update Milestone</a></li>
+                                <li><a href="add_experience.php">Experience</a></li>
                             </ul>
                         </li>
 

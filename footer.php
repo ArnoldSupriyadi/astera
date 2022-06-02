@@ -23,19 +23,25 @@ include "connection.php";
                         <div class="row">
                             <!--Footer Column-->
                             <div class="footer-column col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <?php
+                                    $sql= mysqli_query($con,"select * from  footer");
+                                    while($footer=mysqli_fetch_assoc($sql))
+                                    {
+                                ?>
                                 <div class="footer-widget about-widget">
                                     <div class="footer-logo">
                                         <figure>
                                             <a href="index.php">
-                                                <img src="image/ASTERA_LOGO_FOOTER.jpg" style="width: 48%;" alt="">
+                                                <img src="footer/<?= $footer['image'];?>" style="width: 48%;" alt="">
                                                 <!-- <h2 style="font-size: 36px;">LOGO</h2> -->
                                             </a>
                                         </figure>
                                     </div>
                                     <div class="widget-content">
-                                        <div class="text">Astera is the first manufacture of quartz slab in Indonesia. We produce the high quality of quartz slab and distribution around the globe. We regulary export to many country such as United State of America, Canada, and United Kingdom.</div>
+                                        <div class="text"><?= $footer['content'];?></div>
                                     </div>
                                 </div>
+                                 <?php } ?>
                             </div>
                             
                             <!--Footer Column-->

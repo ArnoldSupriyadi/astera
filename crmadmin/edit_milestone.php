@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
         $file_name = $_POST['image1'];
     }
     else{
-        unlink("../footer/".$_POST['img_id']);
+        unlink("../milestone/".$_POST['img_id']);
     }
 
     $file_size =$_FILES['image']['size'];
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
     }
     if(empty($errors)==true) {
 
-        move_uploaded_file($file_tmp, "../footer/" . $file_name);
+        move_uploaded_file($file_tmp, "../milestone/" . $file_name);
 
 
 
@@ -56,13 +56,12 @@ if(isset($_POST['submit'])){
 
 
     $pid=$_POST['pid'];
-    $content=$_POST['content'];
     // $title = $_POST['title'];
     // $description = $_POST['description'];
     // $b_id=$_POST['b_id'];
 
 
-    $sql = mysqli_query($con, "UPDATE footer SET content='$content' ,image='$file_name'   WHERE id=$pid ");
+    $sql = mysqli_query($con, "UPDATE milestone SET image='$file_name'  WHERE id=$pid ");
 
     if($sql){
         $msg="Blog Updated Successfully...";
@@ -129,14 +128,14 @@ if(isset($_POST['submit'])){
                         <div class="panel-heading">
                             <div class="btn-group" id="buttonexport">
                                 <a href="#">
-                                    <h4>Edit Blog Details</h4>
+                                    <h4>Edit Milestone</h4>
                                 </a>
                             </div>
                         </div>
                         <div class="panel-body">
                         <?php
                             $crid=$_GET['crtid'];
-                            $sql= mysqli_query($con,"select * from footer where id='$crid'  ");
+                            $sql= mysqli_query($con,"select * from milestone where id='$crid'  ");
 
                             $total=mysqli_fetch_assoc($sql);
                             
@@ -150,20 +149,12 @@ if(isset($_POST['submit'])){
                             <div class="row"  style="padding-left: 25px;"  >
                                 <div  class="form-group col-sm-6">
                                     <div><label> Choose Blog Image </label>
-                                        <img src="../footer/<?= $total['image'];?>"  style="width: 150px;height: 120px; margin-bottom: 20px">
+                                        <img src="../milestone/<?= $total['image'];?>"  style="width: 150px;height: 120px; margin-bottom: 20px">
                                         <input type="file"  id="imgInp" class="form-control" name="image" placeholder="" onchange="readURL(this)"   >
-                                        <small style="color: #990000;">Ukuran Gambar 377 × 188 pixel</small>
+                                        <small style="color: #990000;">Ukuran Gambar 1016 × 1472 pixel</small>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-md-12">
-                                <div class="form-group col-sm-12">
-                                    <label> Enter Blog Content </label>
-                                    <textarea type="text" name="content" style="width: 515px;height: 160px;"><?php echo $total['content'];?></textarea>
-                                </div>
-                            </div>
-
 
                         </div>
 
@@ -176,7 +167,7 @@ if(isset($_POST['submit'])){
 
                         <div class="col-md-12">
                             <div class="reset-button" style="padding-left: 390px;">
-                                <input type="submit" name="submit" value="Update Footer" class="btn btn-add">
+                                <input type="submit" name="submit" value="Update milestone" class="btn btn-add">
                             </div>
                         </div>
 
