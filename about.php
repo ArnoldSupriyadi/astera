@@ -406,34 +406,41 @@ body {
                 <div class="features">
                     <div class="row">
                         <!-- Feature Block -->
+                        <?php
+                            $sql= mysqli_query($con,"select * from card_benefits");
+                            while($benefits=mysqli_fetch_assoc($sql))
+                            {
+                        ?>
                         <div class="feature-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <div class="icon-box"><span class="icon flaticon-decorating"></span></div>
-                                <h3><a href="javascript:void(0);">Perfect Design</a></h3>
-                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
-                                <div class="link-box"><a href="javascript:void(0);">Read More</a></div>
+                                <div class="icon-box"><span class="<?= $benefits['image'] ?>"></span></div>
+                                <h3><a href="javascript:void(0);"><?= $benefits['title'] ?></a></h3>
+                                <div class="text"><?= $benefits['subtitle'] ?></div>
+                                <div class="link-box"><a href="<?= $benefits['link'] ?>">Read More</a></div>
                             </div>
                         </div>
-
+                        <?php 
+                          }
+                        ?>
                         <!-- Feature Block -->
-                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+                        <!-- <div class="feature-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
                                 <div class="icon-box"><span class="icon flaticon-plan"></span></div>
                                 <h3><a href="javascript:void(0);">Carefully Planned</a></h3>
                                 <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
                                 <div class="link-box"><a href="javascript:void(0);">Read More</a></div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Feature Block -->
-                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+                        <!-- <div class="feature-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
                                 <div class="icon-box"><span class="icon flaticon-sketch-3"></span></div>
                                 <h3><a href="javascript:void(0);">Smartly Execute</a></h3>
                                 <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
                                 <div class="link-box"><a href="javascript:void(0);">Read More</a></div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

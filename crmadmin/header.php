@@ -188,6 +188,7 @@
                                 <li><a href="update_aboutus.php">Update Blog</a></li>
                                 <li><a href="add_milestone.php">Update Milestone</a></li>
                                 <li><a href="add_experience.php">Experience</a></li>
+                                <li><a href="add_card_benefits.php">Card Benefits</a></li>
                             </ul>
                         </li>
 

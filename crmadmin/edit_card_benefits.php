@@ -17,44 +17,6 @@ include_once("../connection.php");
 if(isset($_POST['submit'])){
 
 
-    $file_name = $_FILES['image']['name'];
-
-    if($file_name=='')
-    {
-        $file_name = $_POST['image1'];
-    }
-    else{
-        unlink("../footer/".$_POST['img_id']);
-    }
-
-    $file_size =$_FILES['image']['size'];
-    $file_tmp =$_FILES['image']['tmp_name'];
-    $file_type=$_FILES['image']['type'];
-
-    $array = explode('.', $_FILES['image']['name']);
-    $file_ext=strtolower(end($array));
-
-
-
-    $expensions= array("jpeg","jpg","png");
-
-    if(in_array($file_ext,$expensions)=== false){
-        $errors="extension not allowed, please choose a JPEG or PNG or JPG.";
-    }
-
-    if($file_size > 12097152){
-        $errors='File size must be excately 11 MB';
-    }
-    if(empty($errors)==true) {
-
-        move_uploaded_file($file_tmp, "../footer/" . $file_name);
-
-
-
-    }
-
-
-
     $pid=$_POST['pid'];
     $content=$_POST['content'];
     // $title = $_POST['title'];
@@ -104,7 +66,7 @@ if(isset($_POST['submit'])){
                 <i class="fa fa-users"></i>
             </div>
             <div class="header-title">
-                <h1>Edit Footer</h1>
+                <h1>Edit Benefits</h1>
 
             </div>
         </section>
@@ -129,16 +91,16 @@ if(isset($_POST['submit'])){
                         <div class="panel-heading">
                             <div class="btn-group" id="buttonexport">
                                 <a href="#">
-                                    <h4>Edit Blog Details</h4>
+                                    <h4>Edit Card Benefits</h4>
                                 </a>
                             </div>
                         </div>
                         <div class="panel-body">
                         <?php
                             $crid=$_GET['crtid'];
-                            $sql= mysqli_query($con,"select * from footer where id='$crid'  ");
+                            $sql= mysqli_query($con,"select * from card_benefits where id='$crid'  ");
 
-                            $total=mysqli_fetch_assoc($sql);
+                            $row=mysqli_fetch_assoc($sql);
                             
 
                         ?>
@@ -147,20 +109,31 @@ if(isset($_POST['submit'])){
 
                         <div class="col-md-12">
                             
-                            <div class="row"  style="padding-left: 25px;"  >
-                                <div  class="form-group col-sm-6">
-                                    <div><label> Choose Blog Image </label>
-                                        <img src="../footer/<?= $total['image'];?>"  style="width: 150px;height: 120px; margin-bottom: 20px">
-                                        <input type="file"  id="imgInp" class="form-control" name="image" placeholder="" onchange="readURL(this)"   >
-                                        <small style="color: #990000;">Ukuran Gambar 377 × 188 pixel</small>
-                                    </div>
+                            <div class="col-md-12">
+                                <div class="form-group col-sm-12">
+                                    <label> Enter Blog Content </label>
+                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['image'];?></textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group col-sm-12">
                                     <label> Enter Blog Content </label>
-                                    <textarea type="text" name="content" style="width: 515px;height: 160px;"><?php echo $total['content'];?></textarea>
+                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['title'];?></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group col-sm-12">
+                                    <label> Enter Blog Content </label>
+                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['subtitle'];?></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group col-sm-12">
+                                    <label> Enter Blog Content </label>
+                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['link'];?></textarea>
                                 </div>
                             </div>
 
@@ -168,10 +141,6 @@ if(isset($_POST['submit'])){
                         </div>
 
                         <input type="hidden" name="pid" value="<?php echo $crid; ?>">
-
-                        <input type="hidden" name="image1" value="<?php echo $total['image'];?>">
-
-                        <input type="hidden" name="img_id" value="<?php echo $total['image'];?>">
 
 
                         <div class="col-md-12">
