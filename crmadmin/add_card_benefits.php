@@ -74,7 +74,7 @@
                                      
                                         <tr>
 
-                                            <td style="text-align: center"><?= $row['image'];?></td>
+                                            <td style="text-align: center"><?= $row['icon'];?></td>
 
                                             <td style="text-align: center"><?= $row['title'];?></td>
 

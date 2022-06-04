@@ -18,13 +18,14 @@ if(isset($_POST['submit'])){
 
 
     $pid=$_POST['pid'];
-    $content=$_POST['content'];
-    // $title = $_POST['title'];
-    // $description = $_POST['description'];
-    // $b_id=$_POST['b_id'];
+    $icon=$_POST['icon'];
+    $title = $_POST['title'];
+    $subtitle = $_POST['subtitle'];
+    $link = $_POST['link'];
 
 
-    $sql = mysqli_query($con, "UPDATE footer SET content='$content' ,image='$file_name'   WHERE id=$pid ");
+
+    $sql = mysqli_query($con, "UPDATE card_benefits SET icon='$icon' ,title='$title', subtitle='$subtitle', link='$link' WHERE id=$pid ");
 
     if($sql){
         $msg="Blog Updated Successfully...";
@@ -111,29 +112,30 @@ if(isset($_POST['submit'])){
                             
                             <div class="col-md-12">
                                 <div class="form-group col-sm-12">
-                                    <label> Enter Blog Content </label>
-                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['image'];?></textarea>
+                                    <label> Enter Icon</label>
+                                    <textarea type="text" name="icon" style="width: 515px;"><?php echo $row['icon'];?></textarea>
+                                    <small style="color: #990000;">untuk ganti icon silahkan cek di website <a href="https://fontawesome.com/v4/icons/" target="_blank">Font Awesome 4</a></small>
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group col-sm-12">
-                                    <label> Enter Blog Content </label>
-                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['title'];?></textarea>
+                                    <label> Enter Title </label>
+                                    <textarea type="text" name="title" style="width: 515px;"><?php echo $row['title'];?></textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group col-sm-12">
-                                    <label> Enter Blog Content </label>
-                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['subtitle'];?></textarea>
+                                    <label> Enter Subtitle </label>
+                                    <textarea type="text" name="subtitle" style="width: 515px;"><?php echo $row['subtitle'];?></textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group col-sm-12">
-                                    <label> Enter Blog Content </label>
-                                    <textarea type="text" name="content" style="width: 515px;"><?php echo $row['link'];?></textarea>
+                                    <label> Enter Link </label>
+                                    <textarea type="text" name="link" style="width: 515px;"><?php echo $row['link'];?></textarea>
                                 </div>
                             </div>
 
@@ -145,7 +147,7 @@ if(isset($_POST['submit'])){
 
                         <div class="col-md-12">
                             <div class="reset-button" style="padding-left: 390px;">
-                                <input type="submit" name="submit" value="Update Footer" class="btn btn-add">
+                                <input type="submit" name="submit" value="Update Card Benefits" class="btn btn-add">
                             </div>
                         </div>
 

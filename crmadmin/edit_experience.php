@@ -181,7 +181,7 @@ if(isset($_POST['submit'])){
 
                         <div class="col-md-12">
                             <div class="reset-button" style="padding-left: 390px;">
-                                <input type="submit" name="submit" value="Update Footer" class="btn btn-add">
+                                <input type="submit" name="submit" value="Update Experience" class="btn btn-add">
                             </div>
                         </div>
 

@@ -184,7 +184,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="edit_cover_about.php">Edit Cover About</a></li>
+                                <li><a href="add_cover_about.php">Edit Cover About</a></li>
                                 <li><a href="update_aboutus.php">Update Blog</a></li>
                                 <li><a href="add_milestone.php">Update Milestone</a></li>
                                 <li><a href="add_experience.php">Experience</a></li>
@@ -200,7 +200,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="edit_cover_blog.php">Edit Cover Blog</a></li>
+                                <li><a href="add_cover_blog.php">Edit Cover Blog</a></li>
                                 <li><a href="add_blog.php">Add Blog</a></li>
                                 <li><a href="show_blog.php">Show Blog</a></li>
                             </ul>
@@ -215,13 +215,14 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="edit_cover_product.php">Edit Cover Product</a></li>
+                                <li><a href="add_cover_product.php">Edit Cover Product</a></li>
                                 <li><a href="firstslider.php">First Slider Product</a></li>
                                 <li><a href="show_firstproduct.php"> Show First Slider</a></li>
                                 <li><a href="secondslider.php">Second Slider Product</a></li>
                                 <li><a href="show_secondproduct.php"> Show Second Slider</a></li>
                                 <li><a href="thirdslider.php">Third Slider Product</a></li>
                                 <li><a href="show_thirdproduct.php"> Show Third Slider</a></li>
+                                <li><a href="add_guarantee.php"> Show guarantee</a></li>
                             </ul>
                         </li>
 
@@ -233,9 +234,11 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                 <li><a href="edit_cover_contact.php">Edit Cover Contact</a></li>
+                                 <li><a href="add_cover_contact.php">Edit Cover Contact</a></li>
                                 <li><a href="contactus.php">Contact Us</a></li>
                                 <li><a href="show_contact_form.php">Show Contact Form</a></li>
+                                <li><a href="show_location_list.php">Show Location List</a></li>
+                                <li><a href="add_location_list.php">Add Location List</a></li>
                             </ul>
                         </li> 
 

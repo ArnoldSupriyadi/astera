@@ -67,7 +67,12 @@ $sql = mysqli_query($con, "INSERT INTO  contactform (date,name,email,phone,compa
 </style>
     
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/CONTACT_US_ASTERA.jpg);">
+    <?php
+        $sqlqry= mysqli_query($con,"select * from  contact_banner_image where id=1 ");
+        $tota=mysqli_fetch_assoc($sqlqry);
+        {
+    ?>
+    <section class="page-title" style="background-image:url(cover_banner/<?php echo $tota['banner_image'];?>);">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <div class="title-box">
@@ -77,6 +82,9 @@ $sql = mysqli_query($con, "INSERT INTO  contactform (date,name,email,phone,compa
             </div>
         </div>
     </section>
+    <?php
+        }
+    ?>
     <!--End Page Title-->
 
     <!-- Contact Page Section -->
@@ -84,7 +92,7 @@ $sql = mysqli_query($con, "INSERT INTO  contactform (date,name,email,phone,compa
         <div class="auto-container">
             <div class="row">
                 <!-- Form Column -->
-                <div class="form-column col-lg-7 col-md-12 col-sm-12">
+                <div class="form-column col-lg-6 col-md-6 col-sm-12">
                     <div class="inner-column">
                         <div class="sec-title">
                             <span class="float-text">informaer</span>
@@ -120,24 +128,19 @@ $sql = mysqli_query($con, "INSERT INTO  contactform (date,name,email,phone,compa
                                 </div>
                             </form>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="contact-info">
+                <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top: 100px;">
+                    <div class="inner-column">
+                      <div class="contact-info">
                             <div class="row">
 
                                 <?php
                                     $sqlqry= mysqli_query($con,"select * from  contactus ");
                                     $tota=mysqli_fetch_assoc($sqlqry);
+                                    
                                 ?>
-
-
-                                <div class="info-block col-lg-4 col-md-4 col-sm-12">
-                                    <div class="inner">
-                                        <h4>Location</h4>
-                                        <p><?php echo $tota['address'];?>
-
-                                        </p>
-                                    </div>
-                                </div>
 
                                 <div class="info-block col-lg-4 col-md-4 col-sm-12">
                                     <div class="inner">
@@ -155,16 +158,28 @@ $sql = mysqli_query($con, "INSERT INTO  contactform (date,name,email,phone,compa
                                         <p><a href="mailto:<?php echo $tota['email2'];?>"><?php echo $tota['email2'];?></a></p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="map-column col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                         <div class="map-outer">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014937.4166634362!2d105.94000581415897!3d-6.4454662690111135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9c82e75f991%3A0x60cc66e2865a65f8!2sAstera%20Kitchen%20Cabinet!5e0!3m2!1sen!2sid!4v1640404422527!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+                                <div class="info-block col-lg-4 col-md-4 col-sm-12">
+                                    <div class="inner">
+                                        <h4>Location list</h4>
+                                        <?php
+                                    $sql= mysqli_query($con,"select * from  location_list ");
+                                    while($row=mysqli_fetch_assoc($sql))
+                                    {
+                                ?>
+                                        <p class="mt-4"><?php echo $row['location'];?></p>
+                                        <a href="<?= $row['link'] ?>" target="_blank">Go to Maps</a>
+                                                                        <?php
+                                    }
+                                ?>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                        <!-- <div class="location-list">
+                            <h4>Location List</h4>
+                            <p style="font-size: 14px;"><?php echo $tota['address'];?></p>
+                        </div> -->
                     </div>
                 </div>
             </div>

@@ -682,7 +682,12 @@ $(document).ready(function(){
     <!-- Bnner Section -->
     <section class="banner-section">
         <div class="row">
-            <div class="col-md-12 slide-item" style="background-image: url(image/PRODUCT_ASTERA_BANNER.jpg); background-size: cover; height: 520px;">
+            <?php
+                $sqlqry= mysqli_query($con,"select * from  product_banner_image where id=1 ");
+                $tota=mysqli_fetch_assoc($sqlqry);
+                {
+            ?>
+                <div class="col-md-12 slide-item" style="background-image: url(cover_banner/<?php echo $tota['banner_image'];?>); background-size: cover; height: 520px;">
                     <div class="auto-container">
                     <div class="content-box">
                         <h2>Products</h2>
@@ -690,6 +695,9 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
+            <?php
+                }
+            ?>
         </div>
     </section>
     <!-- End Bnner Section -->
@@ -953,39 +961,25 @@ $(document).ready(function(){
 				<div class="col-lg-1 col-md-1 col-sm-1"></div>
 				<div class="col-lg-10">
 					<div class="row">
+                            <?php
+                                $sql= mysqli_query($con,"select * from  superiority ");
+                                while($row=mysqli_fetch_assoc($sql))
+                                {
+                            ?>
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
                                 <div class="text-center">
                                     <div class="img-box">
-                                        <img class="icon" src="image/icon1.svg" style="width: 128px; height: 128px;">
+                                        <img class="icon" src="superiority/<?= $row['image']  ?>" style="width: 128px; height: 128px;">
                                     </div>
                                     <div class="img-content">
-                                            <h3 class="a">Free Returns</h3>
-                                        <p class="b">30 Day Trial Masa</p>
-                                        <p class="c">Learn More</p>
+                                        <h3 class="a"><?= $row['title'] ?></h3>
+                                        <p class="b"><?= $row['sub_title'] ?></p>
+                                        <a href="<?= $row['link'] ?>" class="c">Learn More</a>
                                     </div>
                                 </div>
     								
 							</div>
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                <div class="text-center">
-    								<img class="icon" src="image/icon2.svg" style="width: 128px; height: 128px;">
-    								<div class="img-content">
-    									<h3 class="a">2 years Warranty</h3>
-    									<p class="bc">2 years Warranty Period</p>
-    									<p class="c">Learn More</p>
-    								</div>
-                                </div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                <div class="text-center">
-    								<img class="icon" src="image/icon3.svg" style="width: 128px; height: 128px;">
-    								<div class="img-content">
-    									<h3 class="a">Pay On The Spot</h3>
-    									<p class="bb">Will be assembled Team lorem</p>
-    									<p class="c">Learn More</p>
-    								</div>
-                                </div>
-							</div>
+                               <?php } ?>
 					</div>
 				</div>	
 				<div class="col-lg-1 col-md-1 col-sm-1"></div>	

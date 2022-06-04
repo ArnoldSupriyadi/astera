@@ -28,7 +28,7 @@
                 <i class="fa fa-users"></i>
             </div>
             <div class="header-title">
-                <h1>Show Footer</h1>
+                <h1>Show Milestone</h1>
             </div>
         </section>
         <!-- Main content -->

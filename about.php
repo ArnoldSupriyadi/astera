@@ -282,9 +282,13 @@ body {
 
 
 </style>
-    
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/BANNER-ABOUT-US.jpg);">
+      <?php
+          $sqlqry= mysqli_query($con,"select * from  aboutus where id=1 ");
+          $tota=mysqli_fetch_assoc($sqlqry);
+          {
+        ?>
+    <section class="page-title" style="background-image: url(cover_banner/<?php echo $tota['banner_image'];?>);">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <div class="title-box">
@@ -299,18 +303,19 @@ body {
         </div>
     </section>
     <!--End Page Title-->
+    <?php 
+                  }
+    ?>
 
     <!-- About Section -->
+
     <section class="about-section" style="background-image: url(images/background/1.jpg);">
         <div class="auto-container">
             <div class="row no-gutters">
-
                 <?php
-                      $sqlqry= mysqli_query($con,"select * from  about where id=1 ");
-                      $tota=mysqli_fetch_assoc($sqlqry);
+                  $sqlqry= mysqli_query($con,"select * from  about where id=1 ");
+                  $tota=mysqli_fetch_assoc($sqlqry);
                 ?>
-
-
                 <!-- Image Column -->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
@@ -413,7 +418,7 @@ body {
                         ?>
                         <div class="feature-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <div class="icon-box"><span class="<?= $benefits['image'] ?>"></span></div>
+                                <div class="icon-box"><span class="<?= $benefits['icon'] ?>"></span></div>
                                 <h3><a href="javascript:void(0);"><?= $benefits['title'] ?></a></h3>
                                 <div class="text"><?= $benefits['subtitle'] ?></div>
                                 <div class="link-box"><a href="<?= $benefits['link'] ?>">Read More</a></div>

@@ -7,6 +7,15 @@ $date=date("Y-m-d");?>
 <?php
 //session_start();
 include_once("../connection.php");
+
+// if(isset($_SESSION['adminuser']) && $_SESSION['password'] != "")
+// {
+// //Task to do
+// }
+// else{
+//     echo '<script>window.location.assign("index.php");</script>';
+
+// }
 ?>
 
 
@@ -17,6 +26,9 @@ include_once("../connection.php");
 if(isset($_POST['submit'])){
 
 
+
+
+
     $file_name = $_FILES['image']['name'];
 
     if($file_name=='')
@@ -24,7 +36,7 @@ if(isset($_POST['submit'])){
         $file_name = $_POST['image1'];
     }
     else{
-        unlink("../footer/".$_POST['img_id']);
+        unlink("../cover_banner/".$_POST['img_id']);
     }
 
     $file_size =$_FILES['image']['size'];
@@ -47,19 +59,21 @@ if(isset($_POST['submit'])){
     }
     if(empty($errors)==true) {
 
-        move_uploaded_file($file_tmp, "../footer/" . $file_name);
+        move_uploaded_file($file_tmp, "../cover_banner/" . $file_name);
+
+
+
     }
 
 
 
     $pid=$_POST['pid'];
-    $content=$_POST['content'];
     // $title = $_POST['title'];
     // $description = $_POST['description'];
     // $b_id=$_POST['b_id'];
 
 
-    $sql = mysqli_query($con, "UPDATE footer SET content='$content' ,image='$file_name'   WHERE id=$pid ");
+    $sql = mysqli_query($con, "UPDATE blog_banner_image SET banner_image='$file_name'  WHERE id=$pid ");
 
     if($sql){
         $msg="Blog Updated Successfully...";
@@ -101,7 +115,7 @@ if(isset($_POST['submit'])){
                 <i class="fa fa-users"></i>
             </div>
             <div class="header-title">
-                <h1>Edit Footer</h1>
+                <h1>Edit Cover About</h1>
 
             </div>
         </section>
@@ -126,14 +140,14 @@ if(isset($_POST['submit'])){
                         <div class="panel-heading">
                             <div class="btn-group" id="buttonexport">
                                 <a href="#">
-                                    <h4>Edit Blog Details</h4>
+                                    <h4>Edit Cover Blog</h4>
                                 </a>
                             </div>
                         </div>
                         <div class="panel-body">
                         <?php
                             $crid=$_GET['crtid'];
-                            $sql= mysqli_query($con,"select * from footer where id='$crid'  ");
+                            $sql= mysqli_query($con,"select * from blog_banner_image where id='$crid'  ");
 
                             $total=mysqli_fetch_assoc($sql);
                             
@@ -142,43 +156,35 @@ if(isset($_POST['submit'])){
                         <form class="col-md-12" action="" method="post" enctype="multipart/form-data">
 
 
-                        <div class="col-md-12">
-                            
-                            <div class="row"  style="padding-left: 25px;"  >
-                                <div  class="form-group col-sm-6">
-                                    <div><label> Choose Blog Image </label>
-                                        <img src="../footer/<?= $total['image'];?>"  style="width: 150px;height: 120px; margin-bottom: 20px">
-                                        <input type="file"  id="imgInp" class="form-control" name="image" placeholder="" onchange="readURL(this)"   >
-                                        <small style="color: #990000;">Ukuran Gambar 377 × 188 pixel</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="form-group col-sm-12">
-                                    <label> Enter Blog Content </label>
-                                    <textarea type="text" name="content" style="width: 515px;height: 160px;"><?php echo $total['content'];?></textarea>
-                                </div>
-                            </div>
+<div class="col-md-12">
+    
+    <div class="row"  style="padding-left: 25px;">
+        <div  class="form-group col-sm-6">
+            <div><label> Choose Cover Blog </label>
+                <img src="../cover_banner/<?php echo $total['banner_image'];?>"  style="width: 150px;height: 120px; margin-bottom: 20px">
+                <input type="file"  id="imgInp" class="form-control" name="image" placeholder="" onchange="readURL(this)"   >
+                <!--<input type="hidden" name="productimage" />-->
+            </div>
+        </div>
+    </div>
 
 
-                        </div>
+</div>
+<input type="hidden" name="pid" value="<?php echo $crid; ?>">
 
-                        <input type="hidden" name="pid" value="<?php echo $crid; ?>">
+     <input type="hidden" name="image1" value="<?php echo $total['image'];?>">
 
-                        <input type="hidden" name="image1" value="<?php echo $total['image'];?>">
-
-                        <input type="hidden" name="img_id" value="<?php echo $total['image'];?>">
-
-
-                        <div class="col-md-12">
-                            <div class="reset-button" style="padding-left: 390px;">
-                                <input type="submit" name="submit" value="Update Footer" class="btn btn-add">
-                            </div>
-                        </div>
+    <input type="hidden" name="img_id" value="<?php echo $total['image'];?>">
 
 
-                        </form>
+<div class="col-md-12">
+    <div class="reset-button" style="padding-left: 390px;">
+        <input type="submit" name="submit" value="Update Cover About" class="btn btn-add">
+    </div>
+</div>
+
+
+</form>
 
 
 

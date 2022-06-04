@@ -33,7 +33,12 @@ include "connection.php";
 </style>
     
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/BLOGS_ASTERA.jpg);">
+     <?php
+          $sqlqry= mysqli_query($con,"select * from  blog_banner_image where id=1 ");
+          $tota=mysqli_fetch_assoc($sqlqry);
+          {
+        ?>
+    <section class="page-title" style="background-image: url(cover_banner/<?php echo $tota['banner_image'];?>);">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <!-- <div class="title-box">
@@ -43,6 +48,9 @@ include "connection.php";
             </div>
         </div>
     </section>
+    <?php 
+        } 
+    ?>
     <!--End Page Title-->
 
     <!-- Blog Section -->
